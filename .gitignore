@@ -1,0 +1,64 @@
+# =========================
+# Node Modules
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# Logs
+# =========================
+logs
+*.log
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Build Folders
+# =========================
+build/
+dist/
+
+# =========================
+# VS Code Settings
+# =========================
+.vscode/
+
+# =========================
+# Backend Specific
+# =========================
+backend/node_modules/
+backend/.env
+
+# =========================
+# Frontend Specific
+# =========================
+frontend/node_modules/
+frontend/.env
+frontend/build/
+
+# =========================
+# Coverage / Testing
+# =========================
+coverage/
+
+# =========================
+# Misc
+# =========================
+*.pid
+*.seed
+*.pid.lock
