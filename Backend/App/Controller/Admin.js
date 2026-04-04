@@ -2,7 +2,7 @@ import Admin from "../Models/Admin.js";
 import bcrypt from "bcryptjs";
 const register = async (req, res) => {
   try {
-    const { name, password, email } = req.body;
+    const { name, password, email,role } = req.body;
 
     if (!name || !password || !email) {
       return res.status(400).json({
@@ -20,6 +20,7 @@ const register = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      role
     });
 
     return res.status(201).json({
