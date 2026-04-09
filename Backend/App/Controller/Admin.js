@@ -53,7 +53,7 @@ const login = async (req, res) => {
     });
   }
 
-  const ismatch = await bcrypt.compare(password, checkuser.password);
+  const ismatch = await bcrypt.compare(password, checkAdmin.password);
   try {
     if (!ismatch) {
       return res.status(400).json({
