@@ -81,4 +81,23 @@ const login = async (req, res) => {
   }
 };
 
-export { register,login };
+const profile = async (req, res) => {
+  try {
+    const admin = await Admin.findById(req.user.id);
+    if (!admin) {
+      return res.status(400).json({
+        message: "User not found",
+      });
+    }
+     return res.status(200).json({
+      message: "User profile fetched",
+      admin,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      message: "Server error",
+    });
+  }
+};
+
+export { register, login,profile };
