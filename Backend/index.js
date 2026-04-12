@@ -3,6 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import adminRoute from "./App/Routes/Admin.js";
+import teacherRoute from "./App/Routes/Teacher.js";
 
 dotenv.config();
 
@@ -13,6 +14,8 @@ app.use(cors());
 app.use(express.json()); 
 
 app.use("/api/admin",adminRoute);
+
+app.use("/api/teacher",teacherRoute);
 
 mongoose.connect(process.env.MongoDb_url)
 .then(() => {
