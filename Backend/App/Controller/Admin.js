@@ -100,4 +100,16 @@ const profile = async (req, res) => {
   }
 };
 
-export { register, login,profile };
+const logout = async (req, res)=>{
+  try {
+    return res.status(200).json({
+      message: "Logout successful",
+    });
+  } catch (err) {
+    return res.status(500).json({
+      message: "Logout failed",
+    });
+  }
+}
+
+export { register, login,profile,logout };
