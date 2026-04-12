@@ -72,26 +72,27 @@ attendance-management-system/
 │   ├── controllers/
 │   ├── routes/
 │   ├── middleware/
-│   └── server.js
+│   └── index.js
 ```
 
 ---
 
 ## 🗃️ Database Schema
 
-### 👤 User Schema
+### 👤 Admin Schema
 
 ```
 name: String
 email: String
 password: String
-role: (Admin / Teacher / Student)
+role: (Admin)
 ```
 
 ### 👨‍🏫 Teacher Schema
 
 ```
 userId
+password
 subject
 assignedClasses
 ```
@@ -100,6 +101,7 @@ assignedClasses
 
 ```
 userId
+password
 class
 rollNumber
 ```
@@ -196,7 +198,7 @@ npm start
 ```
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 ---
