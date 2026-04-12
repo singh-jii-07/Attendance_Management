@@ -91,10 +91,12 @@ role: (Admin)
 ### 👨‍🏫 Teacher Schema
 
 ```
-userId
+teacherId
 password
 subject
 assignedClasses
+email
+name
 ```
 
 ### 👨‍🎓 Student Schema
